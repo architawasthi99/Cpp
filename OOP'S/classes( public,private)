@@ -1,0 +1,35 @@
+#include<iostream>
+#include<string>
+using namespace std;
+class employee{
+    private:
+    double sal;
+    public:
+    string name;
+    string dep;
+    int age;
+    
+    // void changedep(string newdep){
+        // dep=newdep;
+    // }
+    // setter
+    void setsalary(double s){
+        sal=s;
+    }
+    // getter
+    double getsalary(){
+        return sal;
+    }
+};
+int main(){
+    employee t1;
+    t1.name="ARCHIT";
+    t1.dep="HOD";
+    t1.setsalary(25000);
+    t1.age=23;
+    cout<<t1.name<<endl;
+    cout<<t1.dep<<endl;
+    cout<<t1.getsalary()<<endl;
+    cout<<t1.age<<endl;
+    return 0;
+}
