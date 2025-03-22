@@ -1,0 +1,15 @@
+#include<iostream>
+#include<map>
+#include<algorithm>
+#include<vector>
+using namespace std;
+int main(){
+    
+    vector<int>vec={45,67,23,12,10};
+    sort(vec.begin(),vec.end());
+    for(auto val:vec){
+        cout<<val<<" ";
+    }
+    cout<<endl;
+    return 0;
+}
