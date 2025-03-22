@@ -1,0 +1,21 @@
+#include<iostream>
+#include<map>
+using namespace std;
+int main(){
+    map<string,int>m;
+    
+    m["tv"]=100;
+    m["phone"]=100;
+    m["smart"]=50;
+    m.insert({"cam",90});
+    for(auto a:m){
+        cout<<a.first<<" "<<a.second<<endl;
+    }
+    cout<<m.count("tv");
+    cout<<endl;
+    m.erase("tv");
+    for(auto a:m){
+        cout<<a.first<<" "<<a.second<<endl;
+    }
+    return 0;
+}
