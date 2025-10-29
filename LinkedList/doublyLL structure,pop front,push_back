@@ -40,6 +40,24 @@ public:
             tail=newNode;
         }
     }
+    void pop_back(){
+        Node* temp=tail;
+        tail=tail->prev;
+        if(tail!=NULL){
+            tail->next=NULL;
+            temp->prev=NULL;
+            delete temp;
+        }
+    }
+    void pop_front(){
+        Node* temp=head;
+        head=head->next;
+        if(head!=NULL){
+            head->prev=NULL;
+            temp->next=NULL;
+            delete temp;
+        }
+    }
     void print(){
         Node* temp=head;
         while(temp!=NULL){
@@ -55,6 +73,12 @@ int main(){
     dll.push_front(8);
     dll.push_front(9);
     dll.push_back(99);
+    dll.print();
+    cout<<"AFTER POP BACK\n";
+    dll.pop_back();
+    dll.print();
+    cout<<"AFTER POP FRONT\n";
+    dll.pop_front();
     dll.print();
     return 0;
 }
